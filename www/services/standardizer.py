@@ -14,7 +14,7 @@ import numpy as np
 # TYPE CONTRACTS
 # ----------------------------------------------------------------------
 LIST_COLUMNS = ["AU", "AF", "C1", "CR", "DE", "ID"]
-INT_COLUMNS = ["TC"]
+INT_COLUMNS = ["TC","PY"]
 
 TARGET_SCHEMA = [
     "DB", "UT", "DI", "PMID", "TI", "SO", "JI", "PY", "DT", "LA", "TC",
@@ -134,3 +134,38 @@ def _to_list(value, delimiter: str) -> list:
     if value is None or (isinstance(value, float) and pd.isna(value)):
         return []
     return [part.strip() for part in str(value).split(delimiter) if part.strip()]
+
+def validate(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Validate that a standardized DataFrame conforms to the WoS schema contract.
+
+    Checks:
+      - every column in TARGET_SCHEMA is present
+      - no NaN/None values remain
+      - all LIST_COLUMNS contain Python lists
+      - all INT_COLUMNS are integer-typed
+
+    Raises:
+        ValueError: if any contract is violated.
+
+    Returns:
+        The same DataFrame, unchanged, if all checks pass.
+    """
+    missing = [c for c in TARGET_SCHEMA if c not in df.columns]
+    if missing:
+        raise ValueError(f"Missing mandatory columns: {missing}")
+
+    if df.isna().any().any():
+        bad = df.columns[df.isna().any()].tolist()
+        raise ValueError(f"NaN/None values remain in columns: {bad}")
+
+    for col in LIST_COLUMNS:
+        nonlist = df[col].apply(lambda v: not isinstance(v, list))
+        if nonlist.any():
+            raise ValueError(f"Column '{col}' contains non-list values.")
+
+    for col in INT_COLUMNS:
+        if not pd.api.types.is_integer_dtype(df[col]):
+            raise ValueError(f"Column '{col}' is not integer-typed.")
+
+    return df
