@@ -115,7 +115,7 @@ def _ensure_all_columns(df: pd.DataFrame) -> pd.DataFrame:
         if col not in df.columns:
             df[col] = np.nan
     return df
-
+ 
 
 def _enforce_types(df: pd.DataFrame, delimiter: str) -> pd.DataFrame:
     """
@@ -124,22 +124,43 @@ def _enforce_types(df: pd.DataFrame, delimiter: str) -> pd.DataFrame:
       - int columns  -> int, nulls -> 0
       - scalar str   -> str, nulls -> ""
     """
-    for col in LIST_COLUMNS:
-        df[col] = df[col].apply(lambda v: _to_list(v, delimiter))
     
+    for col in LIST_COLUMNS:
+        if col == "CR":
+            df[col] = df[col].apply(_split_scopus_references)
+        else:
+            df[col] = df[col].apply(lambda v: _to_list(v, delimiter))
     # Normalize country spellings in affiliations (C1) for reliable AU_CO extraction
     if "C1" in df.columns:
         df["C1"] = df["C1"].apply(_normalize_countries)
 
     for col in INT_COLUMNS:
         df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0).astype(int)
-
+    
     scalar_cols = [c for c in TARGET_SCHEMA if c not in LIST_COLUMNS + INT_COLUMNS]
     for col in scalar_cols:
         df[col] = df[col].fillna("").astype(str).replace("nan", "")
 
     return df
 
+import re  # add at top of file if not already imported
+
+def _split_scopus_references(value) -> list:
+    """
+    Split a Scopus 'References' field into individual references.
+
+    Scopus separates references with '; ' but ALSO uses '; ' between co-authors
+    within a single reference. Real references reliably end with '(YEAR)', so we
+    split only on '; ' that follows a closing parenthesis.
+    """
+    if value is None or (isinstance(value, float) and pd.isna(value)):
+        return []
+    text = str(value).strip()
+    if not text:
+        return []
+    # Split on "; " only when preceded by ")"  -> reference boundary after (year)
+    parts = re.split(r"(?<=\));\s+", text)
+    return [p.strip() for p in parts if p.strip()]
 
 def _to_list(value, delimiter: str) -> list:
     """Convert a delimited string / NaN / list into a clean list[str]."""
