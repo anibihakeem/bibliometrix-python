@@ -37,7 +37,7 @@ SCOPUS_MAP = {
     "Page end":                      "EP",
     "Cited by":                      "TC",
     "DOI":                           "DI",
-    "Affiliations":                  "C1",
+    "Authors with affiliations":     "C1",
     "Correspondence Address":        "RP",
     "Abstract":                      "AB",
     "Author Keywords":               "DE",
@@ -64,6 +64,16 @@ SOURCE_REGISTRY = {
     "openalex":   (OPENALEX_MAP,   "OPENALEX",   "|"),
 }
 
+# ----------------------------------------------------------------------
+# Country-name normalization: source spelling -> countries.txt spelling.
+# Applied to C1 affiliation strings so AU_CO country matching succeeds.
+# ----------------------------------------------------------------------
+COUNTRY_NORMALIZATION = {
+    "Viet Nam": "Vietnam",
+    "Russian Federation": "Russia",
+    "Korea, Republic of": "South Korea",
+    "Czech Republic": "Czech Republic",
+}
 
 def standardize(raw_df: pd.DataFrame, source: str) -> pd.DataFrame:
     """
@@ -116,6 +126,10 @@ def _enforce_types(df: pd.DataFrame, delimiter: str) -> pd.DataFrame:
     """
     for col in LIST_COLUMNS:
         df[col] = df[col].apply(lambda v: _to_list(v, delimiter))
+    
+    # Normalize country spellings in affiliations (C1) for reliable AU_CO extraction
+    if "C1" in df.columns:
+        df["C1"] = df["C1"].apply(_normalize_countries)
 
     for col in INT_COLUMNS:
         df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0).astype(int)
@@ -134,6 +148,16 @@ def _to_list(value, delimiter: str) -> list:
     if value is None or (isinstance(value, float) and pd.isna(value)):
         return []
     return [part.strip() for part in str(value).split(delimiter) if part.strip()]
+
+def _normalize_countries(affiliations: list) -> list:
+    """Canonicalize country-name spelling variants at the end of each affiliation string."""
+    out = []
+    for aff in affiliations:
+        for variant, canonical in COUNTRY_NORMALIZATION.items():
+            if aff.endswith(variant):
+                aff = aff[: -len(variant)] + canonical
+        out.append(aff)
+    return out
 
 def validate(df: pd.DataFrame) -> pd.DataFrame:
     """
