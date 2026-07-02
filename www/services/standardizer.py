@@ -94,7 +94,7 @@ OPENALEX_MAP = {
 SOURCE_REGISTRY = {
     "scopus":     (SCOPUS_MAP,     "SCOPUS",     ";"),
     "dimensions": (DIMENSIONS_MAP, "DIMENSIONS", ";"),
-    "openalex":   (OPENALEX_MAP,   "OPENALEX",   "|"),
+    "openalex":   (OPENALEX_MAP,   "OPENALEX",   ";"),
 }
 
 # ----------------------------------------------------------------------
