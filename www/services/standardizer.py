@@ -71,7 +71,23 @@ DIMENSIONS_MAP = {
     # "Pagination" handled separately -> split into BP / EP
 }
 OPENALEX_MAP = {
-    # filled in the Advanced API layer
+    "id":              "UT",
+    "doi":             "DI",
+    "title":           "TI",
+    "publication_year":"PY",
+    "source_name":     "SO",
+    "type":            "DT",
+    "language":        "LA",
+    "cited_by_count":  "TC",
+    "authors":         "AU",
+    "affiliations":    "C1",
+    "volume":          "VL",
+    "issue":           "IS",
+    "first_page":      "BP",
+    "last_page":       "EP",
+    "keywords":        "DE",
+    "abstract":        "AB",
+    "references":      "CR",   # OpenAlex work-IDs, not formatted refs (limitation)
 }
 
 # Dispatcher: source name -> (mapping dict, DB label, multi-value delimiter)
