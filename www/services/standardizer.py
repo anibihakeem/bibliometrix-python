@@ -263,3 +263,38 @@ def validate(df: pd.DataFrame) -> pd.DataFrame:
             raise ValueError(f"Column '{col}' is not integer-typed.")
 
     return df
+
+def export_standardized(df: pd.DataFrame, path: str) -> None:
+    """
+    Serialize a standardized DataFrame to disk (Load phase).
+
+    Multi-value list columns are joined with the standard internal
+    delimiter ';' so the file is flat-format compatible (xlsx/csv),
+    matching the serialization convention of native bibliometrix exports.
+    """
+    flat = df.copy()
+    for col in LIST_COLUMNS:
+        flat[col] = flat[col].apply(lambda l: ";".join(l) if isinstance(l, list) else l)
+    if path.endswith(".xlsx"):
+        flat.to_excel(path, index=False)
+    else:
+        flat.to_csv(path, index=False)
+
+def run_pipeline(raw_df: pd.DataFrame, source: str) -> pd.DataFrame:
+    """
+    Full ETL transform: standardize -> derive SR -> validate.
+
+    This is the single entry point (conceptual equivalent of R's convert2df):
+    raw source DataFrame in, analysis-ready standardized DataFrame out.
+    """
+    from shiny import reactive
+    from www.services.metatagextraction import metaTagExtraction
+
+    df = standardize(raw_df, source)
+
+    wrapped = reactive.Value(df)
+    with reactive.isolate():
+        metaTagExtraction(wrapped, "SR")
+        df = wrapped.get()
+
+    return validate(df)
