@@ -50,9 +50,26 @@ SCOPUS_MAP = {
 }
 
 DIMENSIONS_MAP = {
-    # filled later from a real Dimensions XLSX export
+    "Publication ID":            "UT",    # e.g. "pub.1195337241"
+    "DOI":                       "DI",
+    "PMID":                      "PMID",
+    "Title":                     "TI",
+    "Abstract":                  "AB",
+    "Source title":              "SO",
+    "PubYear":                   "PY",    # already numeric
+    "Volume":                    "VL",
+    "Issue":                     "IS",
+    "Publication Type":          "DT",    # "Chapter", "Article", ...
+    "Authors":                   "AU",    # "Surname, First; Surname, First"
+    "Authors (Raw Affiliation)": "C1",    # per-author "(affil)" -> keeps linkage
+    "Corresponding Authors":     "RP",
+    "Times cited":               "TC",
+    "MeSH terms":                "ID",    # controlled keywords -> Index Keywords
+    # No References column in Dimensions free export -> CR stays []
+    # No author keywords column -> DE stays []
+    # No ISO abbreviation -> JI stays "" (SR falls back to SO)
+    # "Pagination" handled separately -> split into BP / EP
 }
-
 OPENALEX_MAP = {
     # filled in the Advanced API layer
 }
@@ -92,6 +109,13 @@ def standardize(raw_df: pd.DataFrame, source: str) -> pd.DataFrame:
     mapping, db_label, delimiter = SOURCE_REGISTRY[source]
 
     df = _rename_columns(raw_df, mapping)
+
+    # Source-specific structural transforms (things a rename can't express)
+    if source == "dimensions" and "Pagination" in raw_df.columns:
+        pages = raw_df["Pagination"].fillna("").astype(str).str.split("-", n=1, expand=True)
+        df["BP"] = pages[0].fillna("")
+        df["EP"] = pages[1].fillna("") if pages.shape[1] > 1 else ""
+
     df = _ensure_all_columns(df)
     df = _enforce_types(df, delimiter)
     df["DB"] = db_label
@@ -179,6 +203,15 @@ def _normalize_countries(affiliations: list) -> list:
                 aff = aff[: -len(variant)] + canonical
         out.append(aff)
     return out
+
+def load_dimensions_xlsx(path: str) -> pd.DataFrame:
+    """
+    Load a Dimensions XLSX export.
+
+    Dimensions places a disclaimer/notice row above the real header row,
+    so the file must be read with skiprows=1 to get correct column names.
+    """
+    return pd.read_excel(path, skiprows=1)
 
 def validate(df: pd.DataFrame) -> pd.DataFrame:
     """
