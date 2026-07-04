@@ -1,0 +1,814 @@
+PMID- 30102808
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20190923
+LR  - 20190923
+IS  - 1365-2796 (Electronic)
+IS  - 0954-6820 (Linking)
+VI  - 284
+IP  - 6
+DP  - 2018 Dec
+TI  - eDoctor: machine learning and the future of medicine.
+PG  - 603-619
+LID - 10.1111/joim.12822 [doi]
+AB  - Machine learning (ML) is a burgeoning field of medicine with huge resources being 
+      applied to fuse computer science and statistics to medical problems. Proponents 
+      of ML extol its ability to deal with large, complex and disparate data, often 
+      found within medicine and feel that ML is the future for biomedical research, 
+      personalized medicine, computer-aided diagnosis to significantly advance global 
+      health care. However, the concepts of ML are unfamiliar to many medical 
+      professionals and there is untapped potential in the use of ML as a research 
+      tool. In this article, we provide an overview of the theory behind ML, explore 
+      the common ML algorithms used in medicine including their pitfalls and discuss 
+      the potential future of ML in medicine.
+CI  - © 2018 The Association for the Publication of the Journal of Internal Medicine.
+FAU - Handelman, G S
+AU  - Handelman GS
+AUID- ORCID: 0000-0003-4275-783X
+AD  - Royal Victoria Hospital, Belfast, UK.
+FAU - Kok, H K
+AU  - Kok HK
+AD  - Interventional Radiology Service, Northern Hospital Radiology, Epping, Vic, 
+      Australia.
+FAU - Chandra, R V
+AU  - Chandra RV
+AD  - Interventional Neuroradiology Service, Monash Imaging, Monash Health, Clayton, 
+      Vic, Australia.
+AD  - Faculty of Medicine, Nursing and Health Sciences, Monash University, Clayton, 
+      Vic, Australia.
+FAU - Razavi, A H
+AU  - Razavi AH
+AD  - School of Information Technology and Engineering, University of Ottawa, Ottawa, 
+      ON, Canada.
+AD  - BCE Corporate Security, Ottawa, ON, Canada.
+FAU - Lee, M J
+AU  - Lee MJ
+AD  - Department of Radiology, Beaumont Hospital and Royal College of Surgeons in 
+      Ireland, Dublin, Ireland.
+FAU - Asadi, H
+AU  - Asadi H
+AD  - Interventional Neuroradiology Service, Monash Imaging, Monash Health, Clayton, 
+      Vic, Australia.
+AD  - Department of Radiology, Interventional Neuroradiology Service, Austin Health, 
+      Heidelberg, Vic, Australia.
+AD  - School of Medicine, Faculty of Health, Deakin University, Waurn Ponds, Vic, 
+      Australia.
+LA  - eng
+PT  - Journal Article
+PT  - Review
+DEP - 20180903
+PL  - England
+TA  - J Intern Med
+JT  - Journal of internal medicine
+JID - 8904841
+SB  - IM
+MH  - Algorithms
+MH  - Decision Support Systems, Clinical
+MH  - Forecasting
+MH  - Humans
+MH  - *Machine Learning
+MH  - Medicine/*trends
+MH  - Precision Medicine
+MH  - Supervised Machine Learning
+MH  - Unsupervised Machine Learning
+OTO - NOTNLM
+OT  - artificial intelligence
+OT  - machine learning
+OT  - medicine
+OT  - supervised machine learning
+OT  - unsupervised machine learning
+EDAT- 2018/08/14 06:00
+MHDA- 2019/09/24 06:00
+CRDT- 2018/08/14 06:00
+PHST- 2018/08/14 06:00 [pubmed]
+PHST- 2019/09/24 06:00 [medline]
+PHST- 2018/08/14 06:00 [entrez]
+AID - 10.1111/joim.12822 [doi]
+PST - ppublish
+SO  - J Intern Med. 2018 Dec;284(6):603-619. doi: 10.1111/joim.12822. Epub 2018 Sep 3.
+
+PMID- 34338485
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20220310
+LR  - 20220311
+IS  - 2724-5772 (Electronic)
+IS  - 2724-5683 (Linking)
+VI  - 70
+IP  - 1
+DP  - 2022 Feb
+TI  - Machine learning for cardiology.
+PG  - 75-91
+LID - 10.23736/S2724-5683.21.05709-4 [doi]
+AB  - This paper reviews recent cardiology literature and reports how artificial 
+      intelligence tools (specifically, machine learning techniques) are being used by 
+      physicians in the field. Each technique is introduced with enough details to 
+      allow the understanding of how it works and its intent, but without delving into 
+      details that do not add immediate benefits and require expertise in the field. We 
+      specifically focus on the principal Machine learning based risk scores used in 
+      cardiovascular research. After introducing them and summarizing their assumptions 
+      and biases, we discuss their merits and shortcomings. We report on how frequently 
+      they are adopted in the field and suggest why this is the case based on our 
+      expertise in machine learning. We complete the analysis by reviewing how 
+      corresponding statistical approaches compare with them. Finally, we discuss the 
+      main open issues in applying machine learning tools to cardiology tasks, also 
+      drafting possible future directions. Despite the growing interest in these tools, 
+      we argue that there are many still underutilized techniques: while neural 
+      networks are slowly being incorporated in cardiovascular research, other 
+      important techniques such as semi-supervised learning and federated learning are 
+      still underutilized. The former would allow practitioners to harness the 
+      information contained in large datasets that are only partially labeled, while 
+      the latter would foster collaboration between institutions allowing building 
+      larger and better models.
+FAU - Arfat, Yasir
+AU  - Arfat Y
+AD  - Department of Computer Science, University of Turin, Turin, Italy - 
+      yasir.arfat@unito.it.
+FAU - Mittone, Gianluca
+AU  - Mittone G
+AD  - Department of Computer Science, University of Turin, Turin, Italy.
+FAU - Esposito, Roberto
+AU  - Esposito R
+AD  - Department of Computer Science, University of Turin, Turin, Italy.
+FAU - Cantalupo, Barbara
+AU  - Cantalupo B
+AD  - Department of Computer Science, University of Turin, Turin, Italy.
+FAU - DE Ferrari, Gaetano M
+AU  - DE Ferrari GM
+AD  - Division of Cardiology, Department of Cardiovascular and Thoracic, Molinette 
+      Hospital, Città della Salute e della Scienza, Turin, Italy.
+AD  - Unit of Cardiology, Department of Medical Sciences, University of Turin, Turin, 
+      Italy.
+FAU - Aldinucci, Marco
+AU  - Aldinucci M
+AD  - Department of Computer Science, University of Turin, Turin, Italy.
+LA  - eng
+PT  - Journal Article
+PT  - Review
+DEP - 20210802
+PL  - Italy
+TA  - Minerva Cardiol Angiol
+JT  - Minerva cardiology and angiology
+JID - 101776555
+SB  - IM
+MH  - *Artificial Intelligence
+MH  - *Cardiology/methods
+MH  - Machine Learning
+MH  - Neural Networks, Computer
+MH  - Supervised Machine Learning
+EDAT- 2021/08/03 06:00
+MHDA- 2022/03/11 06:00
+CRDT- 2021/08/02 10:22
+PHST- 2021/08/03 06:00 [pubmed]
+PHST- 2022/03/11 06:00 [medline]
+PHST- 2021/08/02 10:22 [entrez]
+AID - S2724-5683.21.05709-4 [pii]
+AID - 10.23736/S2724-5683.21.05709-4 [doi]
+PST - ppublish
+SO  - Minerva Cardiol Angiol. 2022 Feb;70(1):75-91. doi: 
+      10.23736/S2724-5683.21.05709-4. Epub 2021 Aug 2.
+
+PMID- 34560276
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20220315
+LR  - 20220315
+IS  - 1878-5832 (Electronic)
+IS  - 1359-6446 (Linking)
+VI  - 27
+IP  - 1
+DP  - 2022 Jan
+TI  - Machine-learning methods for ligand-protein molecular docking.
+PG  - 151-164
+LID - S1359-6446(21)00397-4 [pii]
+LID - 10.1016/j.drudis.2021.09.007 [doi]
+AB  - Artificial intelligence (AI) is often presented as a new Industrial Revolution. 
+      Many domains use AI, including molecular simulation for drug discovery. In this 
+      review, we provide an overview of ligand-protein molecular docking and how 
+      machine learning (ML), especially deep learning (DL), a subset of ML, is 
+      transforming the field by tackling the associated challenges.
+CI  - Copyright © 2021 Elsevier Ltd. All rights reserved.
+FAU - Crampon, Kevin
+AU  - Crampon K
+AD  - Université de Reims Champagne Ardenne, CNRS, MEDyC UMR 7369, 51097 Reims, France; 
+      Université de Reims Champagne Ardenne, LICIIS - LRC CEA DIGIT, 51100 Reims, 
+      France; Atos SE, Center of Excellence in Advanced Computing, 38130 Echirolles, 
+      France.
+FAU - Giorkallos, Alexis
+AU  - Giorkallos A
+AD  - Atos SE, Center of Excellence in Advanced Computing, 38130 Echirolles, France.
+FAU - Deldossi, Myrtille
+AU  - Deldossi M
+AD  - Atos SE, Center of Excellence in Advanced Computing, 38130 Echirolles, France.
+FAU - Baud, Stéphanie
+AU  - Baud S
+AD  - Université de Reims Champagne Ardenne, CNRS, MEDyC UMR 7369, 51097 Reims, France.
+FAU - Steffenel, Luiz Angelo
+AU  - Steffenel LA
+AD  - Université de Reims Champagne Ardenne, LICIIS - LRC CEA DIGIT, 51100 Reims, 
+      France. Electronic address: angelo.steffenel@univ-reims.fr.
+LA  - eng
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+PT  - Review
+DEP - 20210921
+PL  - England
+TA  - Drug Discov Today
+JT  - Drug discovery today
+JID - 9604391
+RN  - 0 (Ligands)
+SB  - IM
+MH  - *Artificial Intelligence
+MH  - Deep Learning
+MH  - *Drug Discovery/methods/trends
+MH  - Humans
+MH  - *Ligands
+MH  - Machine Learning
+MH  - Molecular Docking Simulation/*methods
+OTO - NOTNLM
+OT  - Data representation
+OT  - Deep learning
+OT  - Machine learning
+OT  - Molecular docking
+OT  - Sampling
+OT  - Scoring
+EDAT- 2021/09/25 06:00
+MHDA- 2022/03/16 06:00
+CRDT- 2021/09/24 20:16
+PHST- 2021/04/01 00:00 [received]
+PHST- 2021/07/14 00:00 [revised]
+PHST- 2021/09/15 00:00 [accepted]
+PHST- 2021/09/25 06:00 [pubmed]
+PHST- 2022/03/16 06:00 [medline]
+PHST- 2021/09/24 20:16 [entrez]
+AID - S1359-6446(21)00397-4 [pii]
+AID - 10.1016/j.drudis.2021.09.007 [doi]
+PST - ppublish
+SO  - Drug Discov Today. 2022 Jan;27(1):151-164. doi: 10.1016/j.drudis.2021.09.007. 
+      Epub 2021 Sep 21.
+
+PMID- 32800297
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20210204
+LR  - 20240329
+IS  - 1878-1888 (Electronic)
+IS  - 0005-7894 (Print)
+IS  - 0005-7894 (Linking)
+VI  - 51
+IP  - 5
+DP  - 2020 Sep
+TI  - Supervised Machine Learning: A Brief Primer.
+PG  - 675-687
+LID - S0005-7894(20)30067-8 [pii]
+LID - 10.1016/j.beth.2020.05.002 [doi]
+AB  - Machine learning is increasingly used in mental health research and has the 
+      potential to advance our understanding of how to characterize, predict, and treat 
+      mental disorders and associated adverse health outcomes (e.g., suicidal 
+      behavior). Machine learning offers new tools to overcome challenges for which 
+      traditional statistical methods are not well-suited. This paper provides an 
+      overview of machine learning with a specific focus on supervised learning (i.e., 
+      methods that are designed to predict or classify an outcome of interest). Several 
+      common supervised learning methods are described, along with applied examples 
+      from the published literature. We also provide an overview of supervised learning 
+      model building, validation, and performance evaluation. Finally, challenges in 
+      creating robust and generalizable machine learning algorithms are discussed.
+CI  - Copyright © 2020. Published by Elsevier Ltd.
+FAU - Jiang, Tammy
+AU  - Jiang T
+AD  - Boston University School of Public Health.
+FAU - Gradus, Jaimie L
+AU  - Gradus JL
+AD  - Boston University School of Public Health; Boston University School of Medicine.
+FAU - Rosellini, Anthony J
+AU  - Rosellini AJ
+AD  - Center for Anxiety and Related Disorders, Boston University; Department of 
+      Psychological and Brain Sciences, Boston University. Electronic address: 
+      ajrosell@bu.edu.
+LA  - eng
+GR  - K01 MH106710/MH/NIMH NIH HHS/United States
+GR  - R01 MH109507/MH/NIMH NIH HHS/United States
+GR  - R01 MH110453/MH/NIMH NIH HHS/United States
+GR  - R21 MH119492/MH/NIMH NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Review
+DEP - 20200516
+PL  - England
+TA  - Behav Ther
+JT  - Behavior therapy
+JID - 1251640
+SB  - IM
+MH  - Algorithms
+MH  - Humans
+MH  - *Machine Learning
+MH  - *Supervised Machine Learning
+PMC - PMC7431677
+MID - NIHMS1595274
+OTO - NOTNLM
+OT  - ensemble methods
+OT  - machine learning
+OT  - supervised learning
+COIS- Declaration of interests. None.
+EDAT- 2020/08/18 06:00
+MHDA- 2021/02/05 06:00
+PMCR- 2021/09/01
+CRDT- 2020/08/18 06:00
+PHST- 2020/03/02 00:00 [received]
+PHST- 2020/05/13 00:00 [revised]
+PHST- 2020/05/13 00:00 [accepted]
+PHST- 2020/08/18 06:00 [entrez]
+PHST- 2020/08/18 06:00 [pubmed]
+PHST- 2021/02/05 06:00 [medline]
+PHST- 2021/09/01 00:00 [pmc-release]
+AID - S0005-7894(20)30067-8 [pii]
+AID - 10.1016/j.beth.2020.05.002 [doi]
+PST - ppublish
+SO  - Behav Ther. 2020 Sep;51(5):675-687. doi: 10.1016/j.beth.2020.05.002. Epub 2020 
+      May 16.
+
+PMID- 38380541
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20240322
+LR  - 20240322
+IS  - 1524-4563 (Electronic)
+IS  - 0194-911X (Linking)
+VI  - 81
+IP  - 4
+DP  - 2024 Apr
+TI  - AI, Machine Learning, and ChatGPT in Hypertension.
+PG  - 709-716
+LID - 10.1161/HYPERTENSIONAHA.124.19468 [doi]
+AB  - Hypertension, a leading cause of cardiovascular disease and premature death, 
+      remains incompletely understood despite extensive research. Indeed, even though 
+      numerous drugs are available, achieving adequate blood pressure control remains a 
+      challenge, prompting recent interest in artificial intelligence. To promote the 
+      use of machine learning in cardiovascular medicine, this review provides a brief 
+      introduction to machine learning and reviews its notable applications in 
+      hypertension management and research, such as disease diagnosis and prognosis, 
+      treatment decisions, and omics data analysis. The challenges and limitations 
+      associated with data-driven predictive techniques are also discussed. The goal of 
+      this review is to raise awareness and encourage the hypertension research 
+      community to consider machine learning as a key component in developing 
+      innovative diagnostic and therapeutic tools for hypertension. By integrating 
+      traditional cardiovascular risk factors with genomics, socioeconomic, behavioral, 
+      and environmental factors, machine learning may aid in the development of precise 
+      risk prediction models and personalized treatment approaches for patients with 
+      hypertension.
+FAU - Layton, Anita T
+AU  - Layton AT
+AUID- ORCID: 0000-0002-1753-4063
+AD  - Department of Applied Mathematics, Department of Biology, Cheriton School of 
+      Computer Science, and School of Pharmacology, University of Waterloo, Ontario, 
+      Canada.
+LA  - eng
+PT  - Journal Article
+PT  - Review
+DEP - 20240221
+PL  - United States
+TA  - Hypertension
+JT  - Hypertension (Dallas, Tex. : 1979)
+JID - 7906255
+SB  - IM
+MH  - Humans
+MH  - Artificial Intelligence
+MH  - Machine Learning
+MH  - *Hypertension/diagnosis/drug therapy
+MH  - *Cardiovascular Diseases
+MH  - Genomics
+OTO - NOTNLM
+OT  - artificial intelligence
+OT  - cardiovascular diseases
+OT  - hypertension
+OT  - machine learning
+COIS- None.
+EDAT- 2024/02/21 11:15
+MHDA- 2024/03/22 06:44
+CRDT- 2024/02/21 05:30
+PHST- 2024/03/22 06:44 [medline]
+PHST- 2024/02/21 11:15 [pubmed]
+PHST- 2024/02/21 05:30 [entrez]
+AID - 10.1161/HYPERTENSIONAHA.124.19468 [doi]
+PST - ppublish
+SO  - Hypertension. 2024 Apr;81(4):709-716. doi: 10.1161/HYPERTENSIONAHA.124.19468. 
+      Epub 2024 Feb 21.
+
+PMID- 34617632
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20220331
+LR  - 20220401
+IS  - 1521-4095 (Electronic)
+IS  - 0935-9648 (Linking)
+VI  - 34
+IP  - 1
+DP  - 2022 Jan
+TI  - Machine Learning-Driven Biomaterials Evolution.
+PG  - e2102703
+LID - 10.1002/adma.202102703 [doi]
+AB  - Biomaterials is an exciting and dynamic field, which uses a collection of diverse 
+      materials to achieve desired biological responses. While there is constant 
+      evolution and innovation in materials with time, biomaterials research has been 
+      hampered by the relatively long development period required. In recent years, 
+      driven by the need to accelerate materials development, the applications of 
+      machine learning in materials science has progressed in leaps and bounds. The 
+      combination of machine learning with high-throughput theoretical predictions and 
+      high-throughput experiments (HTE) has shifted the traditional Edisonian (trial 
+      and error) paradigm to a data-driven paradigm. In this review, each type of 
+      biomaterial and their key properties and use cases are systematically discussed, 
+      followed by how machine learning can be applied in the development and design 
+      process. The discussions are classified according to various types of materials 
+      used including polymers, metals, ceramics, and nanomaterials, and implants using 
+      additive manufacturing. Last, the current gaps and potential of machine learning 
+      to further aid biomaterials discovery and application are also discussed.
+CI  - © 2021 Wiley-VCH GmbH.
+FAU - Suwardi, Ady
+AU  - Suwardi A
+AD  - Institute of Materials Research and Engineering, A*STAR (Agency for Science, 
+      Technology and Research), 2 Fusionopolis Way, Innovis, #08-03, Singapore, 138634, 
+      Singapore.
+FAU - Wang, FuKe
+AU  - Wang F
+AD  - Institute of Materials Research and Engineering, A*STAR (Agency for Science, 
+      Technology and Research), 2 Fusionopolis Way, Innovis, #08-03, Singapore, 138634, 
+      Singapore.
+FAU - Xue, Kun
+AU  - Xue K
+AD  - Institute of Materials Research and Engineering, A*STAR (Agency for Science, 
+      Technology and Research), 2 Fusionopolis Way, Innovis, #08-03, Singapore, 138634, 
+      Singapore.
+FAU - Han, Ming-Yong
+AU  - Han MY
+AD  - Institute of Materials Research and Engineering, A*STAR (Agency for Science, 
+      Technology and Research), 2 Fusionopolis Way, Innovis, #08-03, Singapore, 138634, 
+      Singapore.
+FAU - Teo, Peili
+AU  - Teo P
+AD  - Institute of Materials Research and Engineering, A*STAR (Agency for Science, 
+      Technology and Research), 2 Fusionopolis Way, Innovis, #08-03, Singapore, 138634, 
+      Singapore.
+FAU - Wang, Pei
+AU  - Wang P
+AD  - Institute of Materials Research and Engineering, A*STAR (Agency for Science, 
+      Technology and Research), 2 Fusionopolis Way, Innovis, #08-03, Singapore, 138634, 
+      Singapore.
+FAU - Wang, Shijie
+AU  - Wang S
+AD  - Institute of Materials Research and Engineering, A*STAR (Agency for Science, 
+      Technology and Research), 2 Fusionopolis Way, Innovis, #08-03, Singapore, 138634, 
+      Singapore.
+FAU - Liu, Ye
+AU  - Liu Y
+AD  - Institute of Materials Research and Engineering, A*STAR (Agency for Science, 
+      Technology and Research), 2 Fusionopolis Way, Innovis, #08-03, Singapore, 138634, 
+      Singapore.
+FAU - Ye, Enyi
+AU  - Ye E
+AD  - Institute of Materials Research and Engineering, A*STAR (Agency for Science, 
+      Technology and Research), 2 Fusionopolis Way, Innovis, #08-03, Singapore, 138634, 
+      Singapore.
+FAU - Li, Zibiao
+AU  - Li Z
+AD  - Institute of Materials Research and Engineering, A*STAR (Agency for Science, 
+      Technology and Research), 2 Fusionopolis Way, Innovis, #08-03, Singapore, 138634, 
+      Singapore.
+FAU - Loh, Xian Jun
+AU  - Loh XJ
+AUID- ORCID: 0000-0001-8118-6502
+AD  - Institute of Materials Research and Engineering, A*STAR (Agency for Science, 
+      Technology and Research), 2 Fusionopolis Way, Innovis, #08-03, Singapore, 138634, 
+      Singapore.
+LA  - eng
+GR  - Agency for Science, Technology and Research/
+PT  - Journal Article
+PT  - Review
+DEP - 20211007
+PL  - Germany
+TA  - Adv Mater
+JT  - Advanced materials (Deerfield Beach, Fla.)
+JID - 9885358
+RN  - 0 (Biocompatible Materials)
+RN  - 0 (Polymers)
+SB  - IM
+MH  - *Biocompatible Materials
+MH  - *Machine Learning
+MH  - Materials Science
+MH  - Polymers
+MH  - Prostheses and Implants
+OTO - NOTNLM
+OT  - artificial intelligence
+OT  - biomaterials
+OT  - machine learning
+EDAT- 2021/10/08 06:00
+MHDA- 2022/04/01 06:00
+CRDT- 2021/10/07 08:48
+PHST- 2021/07/09 00:00 [revised]
+PHST- 2021/04/09 00:00 [received]
+PHST- 2021/10/08 06:00 [pubmed]
+PHST- 2022/04/01 06:00 [medline]
+PHST- 2021/10/07 08:48 [entrez]
+AID - 10.1002/adma.202102703 [doi]
+PST - ppublish
+SO  - Adv Mater. 2022 Jan;34(1):e2102703. doi: 10.1002/adma.202102703. Epub 2021 Oct 7.
+
+PMID- 35718406
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20220621
+LR  - 20220621
+IS  - 1558-1349 (Electronic)
+IS  - 1042-3680 (Linking)
+VI  - 33
+IP  - 3
+DP  - 2022 Jul
+TI  - Machine Learning and Pain Outcomes.
+PG  - 351-358
+LID - S1042-3680(22)00014-6 [pii]
+LID - 10.1016/j.nec.2022.02.012 [doi]
+AB  - Machine learning (ML) is an increasingly popular method of data analysis that has 
+      meaningful application within the realm of pain management. Current research has 
+      used this technique as a tool to refine patient selection for more invasive pain 
+      management treatments in an effort to improve outcomes. It is also being used to 
+      aid in the search for biomarkers that could objectify the quantification of pain 
+      to better assess these outcomes. This article provides an overview of ML and its 
+      applications within the pain field.
+CI  - Copyright © 2022 Elsevier Inc. All rights reserved.
+FAU - Harland, Tessa
+AU  - Harland T
+AD  - Department of Neurosurgery, Albany Medical College, 47 New Scotland Ave, 
+      Physicians Pavilion, 1st Floor, Albany, NY, 12208, USA.
+FAU - Hadanny, Amir
+AU  - Hadanny A
+AD  - Department of Neurosurgery, Albany Medical College, 47 New Scotland Ave, 
+      Physicians Pavilion, 1st Floor, Albany, NY, 12208, USA.
+FAU - Pilitsis, Julie G
+AU  - Pilitsis JG
+AD  - Department of Neurosurgery, Albany Medical College, 47 New Scotland Ave, 
+      Physicians Pavilion, 1st Floor, Albany, NY, 12208, USA; Department of 
+      Neuroscience & Experimental Therapeutics, Albany Medical College, 47 New Scotland 
+      Ave, Albany, NY 12208, USA. Electronic address: jpilitsis@yahoo.com.
+LA  - eng
+PT  - Journal Article
+PT  - Review
+DEP - 20220525
+PL  - United States
+TA  - Neurosurg Clin N Am
+JT  - Neurosurgery clinics of North America
+JID - 9008004
+RN  - 0 (Biomarkers)
+SB  - IM
+MH  - Biomarkers
+MH  - Humans
+MH  - *Machine Learning
+MH  - *Pain
+MH  - Pain Management
+OTO - NOTNLM
+OT  - Biomarker
+OT  - Machine learning
+OT  - Pain management
+OT  - Pain outcomes
+OT  - Patient selection
+OT  - Prediction
+EDAT- 2022/06/20 06:00
+MHDA- 2022/06/22 06:00
+CRDT- 2022/06/19 21:05
+PHST- 2022/06/19 21:05 [entrez]
+PHST- 2022/06/20 06:00 [pubmed]
+PHST- 2022/06/22 06:00 [medline]
+AID - S1042-3680(22)00014-6 [pii]
+AID - 10.1016/j.nec.2022.02.012 [doi]
+PST - ppublish
+SO  - Neurosurg Clin N Am. 2022 Jul;33(3):351-358. doi: 10.1016/j.nec.2022.02.012. Epub 
+      2022 May 25.
+
+PMID- 32589980
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20200702
+LR  - 20200702
+IS  - 2352-3026 (Electronic)
+IS  - 2352-3026 (Linking)
+VI  - 7
+IP  - 7
+DP  - 2020 Jul
+TI  - Machine learning in haematological malignancies.
+PG  - e541-e550
+LID - S2352-3026(20)30121-6 [pii]
+LID - 10.1016/S2352-3026(20)30121-6 [doi]
+AB  - Machine learning is a branch of computer science and statistics that generates 
+      predictive or descriptive models by learning from training data rather than by 
+      being rigidly programmed. It has attracted substantial attention for its many 
+      applications in medicine, both as a catalyst for research and as a means of 
+      improving clinical care across the cycle of diagnosis, prognosis, and treatment 
+      of disease. These applications include the management of haematological 
+      malignancy, in which machine learning has created inroads in pathology, 
+      radiology, genomics, and the analysis of electronic health record data. As 
+      computational power becomes cheaper and the tools for implementing machine 
+      learning become increasingly democratised, it is likely to become increasingly 
+      integrated into the research and practice landscape of haematology. As such, 
+      machine learning merits understanding and attention from researchers and 
+      clinicians alike. This narrative Review describes important concepts in machine 
+      learning for unfamiliar readers, details machine learning's current applications 
+      in haematological malignancy, and summarises important concepts for clinicians to 
+      be aware of when appraising research that uses machine learning.
+CI  - Copyright © 2020 Elsevier Ltd. All rights reserved.
+FAU - Radakovich, Nathan
+AU  - Radakovich N
+AD  - Cleveland Clinic Lerner College of Medicine, Cleveland Clinic, Case Western 
+      Reserve University, Cleveland OH, USA.
+FAU - Nagy, Matthew
+AU  - Nagy M
+AD  - Cleveland Clinic Lerner College of Medicine, Cleveland Clinic, Case Western 
+      Reserve University, Cleveland OH, USA.
+FAU - Nazha, Aziz
+AU  - Nazha A
+AD  - Center for Clinical Artificial Intelligence, Cleveland Clinic, Case Western 
+      Reserve University, Cleveland OH, USA; Department of Hematology and Medical 
+      Oncology, Cleveland Clinic, Case Western Reserve University, Cleveland OH, USA. 
+      Electronic address: nazhaa@ccf.org.
+LA  - eng
+PT  - Journal Article
+PT  - Review
+PL  - England
+TA  - Lancet Haematol
+JT  - The Lancet. Haematology
+JID - 101643584
+SB  - IM
+MH  - Algorithms
+MH  - *Hematologic Neoplasms
+MH  - Humans
+MH  - *Machine Learning
+MH  - Neural Networks, Computer
+EDAT- 2020/06/27 06:00
+MHDA- 2020/07/03 06:00
+CRDT- 2020/06/27 06:00
+PHST- 2020/01/17 00:00 [received]
+PHST- 2020/04/02 00:00 [revised]
+PHST- 2020/04/14 00:00 [accepted]
+PHST- 2020/06/27 06:00 [pubmed]
+PHST- 2020/07/03 06:00 [medline]
+PHST- 2020/06/27 06:00 [entrez]
+AID - S2352-3026(20)30121-6 [pii]
+AID - 10.1016/S2352-3026(20)30121-6 [doi]
+PST - ppublish
+SO  - Lancet Haematol. 2020 Jul;7(7):e541-e550. doi: 10.1016/S2352-3026(20)30121-6.
+
+PMID- 37257440
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20230612
+LR  - 20230612
+IS  - 1751-553X (Electronic)
+IS  - 1751-5521 (Linking)
+VI  - 45 Suppl 2
+DP  - 2023 Jun
+TI  - Applied machine learning in hematopathology.
+PG  - 87-94
+LID - 10.1111/ijlh.14110 [doi]
+AB  - An increasing number of machine learning applications are being developed and 
+      applied to digital pathology, including hematopathology. The goal of these modern 
+      computerized tools is often to support diagnostic workflows by extracting and 
+      summarizing information from multiple data sources, including digital images of 
+      human tissue. Hematopathology is inherently multimodal and can serve as an ideal 
+      case study for machine learning applications. However, hematopathology also poses 
+      unique challenges compared to other pathology subspecialities when applying 
+      machine learning approaches. By modeling the pathologist workflow and thinking 
+      process, machine learning algorithms may be designed to address practical and 
+      tangible problems in hematopathology. In this article, we discuss the current 
+      trends in machine learning in hematopathology. We review currently available 
+      machine learning enabled medical devices supporting hematopathology workflows. We 
+      then explore current machine learning research trends of the field with a focus 
+      on bone marrow cytology and histopathology, and how adoption of new machine 
+      learning tools may be enabled through the transition to digital pathology.
+CI  - © 2023 The Authors. International Journal of Laboratory Hematology published by 
+      John Wiley & Sons Ltd.
+FAU - Dehkharghanian, Taher
+AU  - Dehkharghanian T
+AD  - Department of Nephrology, University Health Network, Toronto, Ontario, Canada.
+AD  - Department of Pathology and Molecular Medicine, McMaster University, Hamilton, 
+      Ontario, Canada.
+FAU - Mu, Youqing
+AU  - Mu Y
+AD  - Department of Pathology and Molecular Medicine, McMaster University, Hamilton, 
+      Ontario, Canada.
+FAU - Tizhoosh, Hamid R
+AU  - Tizhoosh HR
+AUID- ORCID: 0000-0001-5488-601X
+AD  - Rhazes Lab, Artificial Intelligence and Informatics, Mayo Clinic, Rochester, 
+      Minnesota, USA.
+FAU - Campbell, Clinton J V
+AU  - Campbell CJV
+AUID- ORCID: 0000-0002-8896-1134
+AD  - Department of Pathology and Molecular Medicine, McMaster University, Hamilton, 
+      Ontario, Canada.
+AD  - William Osler Health System, Brampton, Ontario, Canada.
+LA  - eng
+PT  - Journal Article
+PT  - Review
+DEP - 20230531
+PL  - England
+TA  - Int J Lab Hematol
+JT  - International journal of laboratory hematology
+JID - 101300213
+SB  - IM
+MH  - Humans
+MH  - *Machine Learning
+MH  - *Algorithms
+MH  - Pathologists
+MH  - Workflow
+OTO - NOTNLM
+OT  - artificial intelligence
+OT  - digital pathology
+OT  - hematopathology
+OT  - machine learning
+OT  - whole slide imaging
+EDAT- 2023/06/01 01:08
+MHDA- 2023/06/12 06:42
+CRDT- 2023/05/31 18:33
+PHST- 2023/03/09 00:00 [received]
+PHST- 2023/05/12 00:00 [accepted]
+PHST- 2023/06/12 06:42 [medline]
+PHST- 2023/06/01 01:08 [pubmed]
+PHST- 2023/05/31 18:33 [entrez]
+AID - 10.1111/ijlh.14110 [doi]
+PST - ppublish
+SO  - Int J Lab Hematol. 2023 Jun;45 Suppl 2:87-94. doi: 10.1111/ijlh.14110. Epub 2023 
+      May 31.
+
+PMID- 35911778
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20220802
+LR  - 20250728
+IS  - 1664-3224 (Electronic)
+IS  - 1664-3224 (Linking)
+VI  - 13
+DP  - 2022
+TI  - Machine Learning Approaches to TCR Repertoire Analysis.
+PG  - 858057
+LID - 10.3389/fimmu.2022.858057 [doi]
+LID - 858057
+AB  - Sparked by the development of genome sequencing technology, the quantity and 
+      quality of data handled in immunological research have been changing 
+      dramatically. Various data and database platforms are now driving the rapid 
+      progress of machine learning for immunological data analysis. Of various topics 
+      in immunology, T cell receptor repertoire analysis is one of the most important 
+      targets of machine learning for assessing the state and abnormalities of immune 
+      systems. In this paper, we review recent repertoire analysis methods based on 
+      machine learning and deep learning and discuss their prospects.
+CI  - Copyright © 2022 Katayama, Yokota, Akiyama and Kobayashi.
+FAU - Katayama, Yotaro
+AU  - Katayama Y
+AD  - Graduate School of Engineering, The University of Tokyo, Tokyo, Japan.
+FAU - Yokota, Ryo
+AU  - Yokota R
+AD  - National Research Institute of Police Science, Kashiwa, Chiba, Japan.
+FAU - Akiyama, Taishin
+AU  - Akiyama T
+AD  - Laboratory for Immune Homeostasis, RIKEN Center for Integrative Medical Sciences, 
+      Yokohama, Japan.
+AD  - Graduate School of Medical Life Science, Yokohama City University, Yokohama, 
+      Japan.
+FAU - Kobayashi, Tetsuya J
+AU  - Kobayashi TJ
+AD  - Institute of Industrial Science, The University of Tokyo, Tokyo, Japan.
+AD  - Graduate School of Engineering, The University of Tokyo, Tokyo, Japan.
+LA  - eng
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+PT  - Review
+DEP - 20220715
+PL  - Switzerland
+TA  - Front Immunol
+JT  - Frontiers in immunology
+JID - 101560960
+RN  - 0 (Receptors, Antigen, T-Cell)
+SB  - IM
+MH  - *Immune System
+MH  - *Machine Learning
+MH  - Receptors, Antigen, T-Cell/genetics
+PMC - PMC9334875
+OTO - NOTNLM
+OT  - T cell
+OT  - T cell receptor
+OT  - deep learning
+OT  - immunoinformatics
+OT  - machine learning
+COIS- The authors declare that the research was conducted in the absence of any 
+      commercial or financial relationships that could be construed as a potential 
+      conflict of interest.
+EDAT- 2022/08/02 06:00
+MHDA- 2022/08/03 06:00
+PMCR- 2022/01/01
+CRDT- 2022/08/01 03:51
+PHST- 2022/01/19 00:00 [received]
+PHST- 2022/06/07 00:00 [accepted]
+PHST- 2022/08/01 03:51 [entrez]
+PHST- 2022/08/02 06:00 [pubmed]
+PHST- 2022/08/03 06:00 [medline]
+PHST- 2022/01/01 00:00 [pmc-release]
+AID - 10.3389/fimmu.2022.858057 [doi]
+PST - epublish
+SO  - Front Immunol. 2022 Jul 15;13:858057. doi: 10.3389/fimmu.2022.858057. eCollection 
+      2022.
