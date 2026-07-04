@@ -128,3 +128,76 @@ def _rebuild_abstract(inverted: dict | None) -> str:
         for i in idxs:
             positions[i] = word
     return " ".join(positions[i] for i in sorted(positions))
+
+import tempfile
+import xml.etree.ElementTree as ET
+
+PUBMED_ESEARCH = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
+PUBMED_EFETCH = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
+
+
+def fetch_pubmed(query: str, max_records: int = 200) -> pd.DataFrame:
+    """
+    Retrieve records from PubMed via NCBI E-utilities and return a raw DataFrame.
+
+    Uses a two-step E-utilities flow: esearch to resolve the query into PubMed IDs,
+    then efetch to download those records in MEDLINE format. The MEDLINE text is
+    parsed by the repository's existing parse_pubmed_data() parser, so no parsing
+    logic is duplicated. The resulting DataFrame's columns are MEDLINE tags matching
+    PUBMED_MAP in standardizer.py.
+
+    Args:
+        query: Free-text search string (e.g. "machine learning").
+        max_records: Maximum number of records to retrieve.
+
+    Returns:
+        A DataFrame with one row per record, columns = MEDLINE tags.
+    """
+    from www.services.parsers import parse_pubmed_data
+
+    # Step 1: esearch -> list of PMIDs
+    search_params = {
+        "db": "pubmed",
+        "term": query,
+        "retmax": max_records,
+        "retmode": "json",
+    }
+    search_data = _request_with_retries(PUBMED_ESEARCH, search_params)
+    pmids = search_data.get("esearchresult", {}).get("idlist", [])
+    if not pmids:
+        return pd.DataFrame()
+
+    # Step 2: efetch -> MEDLINE text for those PMIDs
+    fetch_params = {
+        "db": "pubmed",
+        "id": ",".join(pmids),
+        "rettype": "medline",
+        "retmode": "text",
+    }
+    medline_text = _request_text_with_retries(PUBMED_EFETCH, fetch_params)
+
+    # Reuse the repo's MEDLINE parser (it reads a file path)
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".txt", delete=False,
+                                     encoding="utf-8") as tmp:
+        tmp.write(medline_text)
+        tmp_path = tmp.name
+
+    records = parse_pubmed_data(tmp_path)
+    return pd.DataFrame(records)
+
+
+def _request_text_with_retries(url: str, params: dict) -> str:
+    """GET returning raw text (for efetch MEDLINE), with backoff on 429/5xx."""
+    for attempt in range(MAX_RETRIES):
+        try:
+            resp = requests.get(url, params=params, timeout=30)
+        except requests.exceptions.ConnectionError:
+            time.sleep(BACKOFF_BASE_SECONDS * (2 ** attempt))
+            continue
+        if resp.status_code == 200:
+            return resp.text
+        if resp.status_code in (429, 500, 502, 503):
+            time.sleep(BACKOFF_BASE_SECONDS * (2 ** attempt))
+            continue
+        resp.raise_for_status()
+    raise RuntimeError(f"PubMed request failed after {MAX_RETRIES} retries.")

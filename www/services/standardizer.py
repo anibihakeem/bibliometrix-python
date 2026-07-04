@@ -90,12 +90,30 @@ OPENALEX_MAP = {
     "references":      "CR",   # OpenAlex work-IDs, not formatted refs (limitation)
 }
 
+PUBMED_MAP = {
+    "PMID": "PMID",
+    "TI":   "TI",
+    "AB":   "AB",
+    "FAU":  "AF",
+    "AU":   "AU",
+    "TA":   "JI",   # journal abbreviation -> used by SR
+    "JT":   "SO",
+    "OT":   "DE",   # author keywords
+    "MH":   "ID",   # MeSH headings
+    "AD":   "C1",
+    "LA":   "LA",
+    # "DP" -> PY (year extracted in standardize)
+    # "LID"/"AID" -> DI (doi cleaned in standardize)
+}
+
 # Dispatcher: source name -> (mapping dict, DB label, multi-value delimiter)
 SOURCE_REGISTRY = {
     "scopus":     (SCOPUS_MAP,     "SCOPUS",     ";"),
     "dimensions": (DIMENSIONS_MAP, "DIMENSIONS", ";"),
     "openalex":   (OPENALEX_MAP,   "OPENALEX",   ";"),
+    "pubmed":     (PUBMED_MAP,     "PUBMED",     ";"),
 }
+
 
 # ----------------------------------------------------------------------
 # Country-name normalization: source spelling -> countries.txt spelling.
@@ -124,6 +142,11 @@ def standardize(raw_df: pd.DataFrame, source: str) -> pd.DataFrame:
 
     mapping, db_label, delimiter = SOURCE_REGISTRY[source]
 
+    # PubMed ships a raw "SO" citation field that collides with our JT->SO
+    # mapping; drop it before renaming so JT->SO is the only source for SO.
+    if source == "pubmed" and "SO" in raw_df.columns:
+        raw_df = raw_df.drop(columns=["SO"])
+
     df = _rename_columns(raw_df, mapping)
 
     # Source-specific structural transforms (things a rename can't express)
@@ -132,11 +155,23 @@ def standardize(raw_df: pd.DataFrame, source: str) -> pd.DataFrame:
         df["BP"] = pages[0].fillna("")
         df["EP"] = pages[1].fillna("") if pages.shape[1] > 1 else ""
 
+    if source == "pubmed":
+        # DP "2026 Jul 3" -> PY (extract the 4-digit year)
+        if "DP" in raw_df.columns:
+            df["PY"] = raw_df["DP"].fillna("").astype(str).str.extract(r"(\d{4})")[0]
+        # LID/AID "10.1002/ijgo.71182 [doi]" -> bare DOI
+        doi_src = raw_df["LID"] if "LID" in raw_df.columns else raw_df.get("AID")
+        if doi_src is not None:
+            df["DI"] = (
+                doi_src.fillna("").astype(str)
+                .str.replace(r"\s*\[doi\]", "", regex=True)
+                .str.split(";").str[0]
+            )
+
     df = _ensure_all_columns(df)
     df = _enforce_types(df, delimiter)
     df["DB"] = db_label
     # Keep ONLY the standardized WoS schema; drop unmapped source columns
-    # (this is what removes the leftover NaN-bearing Scopus extras)
     df = df[TARGET_SCHEMA]
     return df
   
