@@ -1,5 +1,5 @@
 from www.services import *
-
+import ast
 
 def get_frequent_words(df, ngram, num_of_words, word_type, file_upload_terms, file_upload_synonyms, field_separator_frequent=';'):
     """
@@ -116,7 +116,13 @@ def table_tag(df, tag, ngrams=1, remove_terms=None, synonyms=None):
 
     # Handle list columns (DE and ID)
     if tag in ['DE', 'ID']:
-        text_data = text_data.dropna().apply(lambda x: ', '.join(eval(x) if isinstance(x, str) else x))
+        text_data = text_data.dropna().apply(
+            lambda x: ', '.join(
+                x if isinstance(x, list)
+                else (ast.literal_eval(x) if isinstance(x, str) and x.strip().startswith("[")
+                      else [i.strip() for i in x.split(";")])
+            )
+        )
 
     # Process words
     if tag in ['DE', 'ID']:

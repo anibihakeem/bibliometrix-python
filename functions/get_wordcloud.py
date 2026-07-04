@@ -1,5 +1,5 @@
 from www.services import *
-
+import ast
 
 def is_legible_on_white(color):
     """Restituisce True se il colore è leggibile su sfondo bianco"""
@@ -122,7 +122,14 @@ def table_tag(df, tag, ngrams=1, remove_terms=None, synonyms=None):
 
     # Handle list columns (DE and ID)
     if tag in ['DE', 'ID']:
-        text_data = text_data.dropna().apply(lambda x: ', '.join(eval(x) if isinstance(x, str) else x))
+        #text_data = text_data.dropna().apply(lambda x: ', '.join(eval(x) if isinstance(x, str) else x))
+        text_data = text_data.dropna().apply(
+            lambda x: ', '.join(
+                x if isinstance(x, list)
+                else (ast.literal_eval(x) if isinstance(x, str) and x.strip().startswith("[")
+                      else [i.strip() for i in x.split(";")])
+            )
+        )
 
     # Process words
     if tag in ['DE', 'ID']:

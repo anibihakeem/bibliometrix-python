@@ -1,5 +1,5 @@
 from www.services import *
-
+import ast
 
 def get_relevant_authors(df, num_of_authors, frequency="N. of Documents"):
     """
@@ -19,8 +19,12 @@ def get_relevant_authors(df, num_of_authors, frequency="N. of Documents"):
     data = data.dropna(subset=["AU"])
 
     # Ensure all values in the "AU" column are lists
-    data["AU"] = data["AU"].apply(lambda x: x if isinstance(x, list) else [])
-
+    #data["AU"] = data["AU"].apply(lambda x: x if isinstance(x, list) else [])
+    data["AU"] = data["AU"].apply(
+        lambda x: x if isinstance(x, list)
+        else (ast.literal_eval(x) if isinstance(x, str) and x.strip().startswith("[")
+              else ([i.strip() for i in x.split(";")] if isinstance(x, str) and x.strip() else []))
+    )
     # Flatten the list of authors and calculate occurrences
     all_authors = [author for sublist in data["AU"] for author in sublist]
     author_counts = pd.Series(all_authors).value_counts()
@@ -103,7 +107,10 @@ def get_relevant_authors(df, num_of_authors, frequency="N. of Documents"):
         )
 
     # Set x-axis ticks to 0, 5, 10, etc.
+
     max_x = author_counts[frequency].max()
+    if pd.isna(max_x):
+        max_x = 0
     tick_step = 5
     x_ticks = list(range(0, int(max_x) + tick_step, tick_step))
     if x_ticks[-1] < max_x:

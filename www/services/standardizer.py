@@ -274,7 +274,8 @@ def export_standardized(df: pd.DataFrame, path: str) -> None:
     """
     flat = df.copy()
     for col in LIST_COLUMNS:
-        flat[col] = flat[col].apply(lambda l: ";".join(l) if isinstance(l, list) else l)
+        flat[col] = flat[col].apply(lambda l: ";".join(l) if isinstance(l, list) else "")
+
     if path.endswith(".xlsx"):
         flat.to_excel(path, index=False)
     else:

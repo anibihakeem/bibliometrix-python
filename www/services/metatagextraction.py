@@ -104,6 +104,8 @@ def AU_CO(M, log=False):
     
     # Convert empty lists in C1 using the values from RP
     C1 = M["C1"].fillna(M["RP"])
+    # Accept both list form (in-memory pipeline) and ';'-joined string form (xlsx load path)
+    C1 = C1.apply(lambda x: x if isinstance(x, list) else ([i.strip() for i in x.split(";")] if isinstance(x, str) and x.strip() else []))
     
     for i in range(len(C1)):
         # Check if the element is an empty list
